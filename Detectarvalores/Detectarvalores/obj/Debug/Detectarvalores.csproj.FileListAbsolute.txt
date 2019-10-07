@@ -1,0 +1,7 @@
+D:\Usuarios\Emanuel\Documentos\Proyectos\Detectarvalores\Detectarvalores\bin\Debug\Detectarvalores.exe.config
+D:\Usuarios\Emanuel\Documentos\Proyectos\Detectarvalores\Detectarvalores\bin\Debug\Detectarvalores.exe
+D:\Usuarios\Emanuel\Documentos\Proyectos\Detectarvalores\Detectarvalores\bin\Debug\Detectarvalores.pdb
+D:\Usuarios\Emanuel\Documentos\Proyectos\Detectarvalores\Detectarvalores\obj\Debug\Detectarvalores.csprojAssemblyReference.cache
+D:\Usuarios\Emanuel\Documentos\Proyectos\Detectarvalores\Detectarvalores\obj\Debug\Detectarvalores.csproj.CoreCompileInputs.cache
+D:\Usuarios\Emanuel\Documentos\Proyectos\Detectarvalores\Detectarvalores\obj\Debug\Detectarvalores.exe
+D:\Usuarios\Emanuel\Documentos\Proyectos\Detectarvalores\Detectarvalores\obj\Debug\Detectarvalores.pdb
