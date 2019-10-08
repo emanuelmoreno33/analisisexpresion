@@ -19,12 +19,32 @@ namespace Detectarvalores
                 string operacion = Console.ReadLine();
 
 
+                //ingreso letras
                 Regex letras = new Regex(@"[^0-9,'+','\-','*','/']+");
+                //ingreso simbolos duplicados
                 Regex duplicados = new Regex(@"['+','\-','*','/']{2}");
+                //termino con simbolo
+                Regex terminacionmal = new Regex(@"['+',-.*,/]$");
+                //Inicia con simbolo
+                Regex iniciamal = new Regex(@"^['+',-.*,/]");
                 Match encontrado = letras.Match(operacion);
                 Match duplica = duplicados.Match(operacion);
+                Match nofin = terminacionmal.Match(operacion);
+                Match noinicio = iniciamal.Match(operacion);
 
-                if (encontrado.Success)
+                if(operacion==""||operacion==null)
+                {
+                    Console.WriteLine("Escribio un enter sin contenido, no es valido");
+                }
+                else if(nofin.Success)
+                {
+                    Console.WriteLine("Termina en simbolo, no es valido");
+                }
+                else if (noinicio.Success)
+                {
+                    Console.WriteLine("Inicia con simbolo, no es valido");
+                }
+                else if (encontrado.Success)
                 {
                     Console.WriteLine("contiene caracteres no validas: ' " + encontrado.Value + " '");
                 }
