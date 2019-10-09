@@ -17,7 +17,7 @@ namespace Detectarvalores
             {
                 Console.WriteLine("Ingrese operacion matematica sin parentesis");
                 string operacion = Console.ReadLine();
-
+                int caracteres = operacion.Length;
 
                 //ingreso letras
                 Regex letras = new Regex(@"[^0-9,'+','\-','*','/']+");
@@ -32,7 +32,11 @@ namespace Detectarvalores
                 Match nofin = terminacionmal.Match(operacion);
                 Match noinicio = iniciamal.Match(operacion);
 
-                if(operacion==""||operacion==null)
+                if (caracteres >= 254)
+                {
+                    Console.WriteLine("LLegaste al maximo, no se puede realizar operacion");
+                }
+                else if(operacion==""||operacion==null)
                 {
                     Console.WriteLine("Escribio un enter sin contenido, no es valido");
                 }
@@ -46,7 +50,7 @@ namespace Detectarvalores
                 }
                 else if (encontrado.Success)
                 {
-                    Console.WriteLine("contiene caracteres no validas: ' " + encontrado.Value + " '");
+                    Console.WriteLine("contiene caracter o frase no valida: ' " + encontrado.Value + " '");
                 }
                 else if (duplica.Success)
                 {
@@ -115,7 +119,7 @@ namespace Detectarvalores
                             {
                                 Console.WriteLine(simb[i, 0]);
                                 simb[i, 1] = "True";
-                            }
+                            }   
                             else
                             {
                                 Console.WriteLine(simb[i + 1, 0]);
@@ -170,7 +174,8 @@ namespace Detectarvalores
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Ingresaste espacio, saliendo del programa");
+                    //Console.WriteLine("Ingresaste un valor no valido, saliendo del programa.");
+                    Console.WriteLine(ex.Message);
                     letra = 'n';
                     Console.ReadKey();
                 }
