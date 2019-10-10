@@ -107,6 +107,7 @@ namespace Detectarvalores
                     int posicion = 0;
                     for (int i = 0; i < contadorsimbolos; i++)
                     {
+                        Console.Write(i + 1 +".- ");
                         if (i == 0 || anterior == "")
                         {
                             string primordial = validacion(simb[i, 0], simb[i + 1, 0]);
